@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>HOME</title>
+		<!--<link ref="stylesheet" href="style.css"/> -->
+		<!--<link ref="stylesheet" href="../static/style.css"/> -->
+		<!--<link ref="stylesheet" href="styles.css"/> -->
+		
+		<link ref="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="brandname">
+
+				</div>
+				<h2 style="color:blue;"><strong>Twitter Sentiment Analysis</strong></h2>
+			</div>	
+		</header>
+		<div class="ml-container">
+			<form action="{{ url_for('predict')}}" method="POST">
+				<h3 style="color:gray;"><em>Enter your message</em></h3>
+				<textarea name="message" rows="4" cols="50"></textarea>
+				<br/>
+				<input type="submit" class="btn-info" value="predict">
+			</form>
+		</div>
+	</body>
+</html>	
+	

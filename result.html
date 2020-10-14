@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Result</title>
+		<link ref="stylesheet" type="text/css" href="{{url_for('static', filename='css/style.css')}}">
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div id="brandname">
+					
+				</div>
+				
+				<h2 style="color:blue;">Twitter Sensitivity detector</h2>
+			</div>	
+		</header>
+		<h3 style="color: gray;">Sentiment Analysis Result</h3>
+		<p style="color:blue;font-size:20;text-align:center;"><b>Result for comment</b></p>
+		<div class="results">
+			{% if prediction == 1 %}
+				<h2 style="color:red;">It's a Negative Comment</h2>
+			{% elif prediction == 0 %}
+				<h2 style="color:green;">It's a Positive Comment</h2>
+			{% endif %}
+		</div>
+		<a href="..">
+			<input type="submit" value="Go Back..">
+		</a>
+	</body>
+</html>		
